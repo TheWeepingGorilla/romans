@@ -16,7 +16,10 @@ def romans(number)
 
   num_C = number / 100
   number = number % 100
-  if num_C == 4
+  if (num_C == 4) && (numeral[-1] == "D")
+    numeral.pop
+    numeral.push("CM")
+  elsif num_C == 4
     numeral.push("CD")
   else
     num_C.times do
@@ -49,7 +52,10 @@ def romans(number)
     numeral.push("V")
   end
 
-  if number == 4
+  if (number == 4) && (numeral[-1] == "V")
+    numeral.pop
+    numeral.push("IX")
+  elsif number == 4
     numeral.push("IV")
   else
     number.times do

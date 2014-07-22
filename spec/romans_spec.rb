@@ -38,4 +38,10 @@ describe("romans") do
   it("converts the arabic numeral 40 to XL") do
     romans(40).should(eq("XL"))
   end
+  it("converts the arabic numeral 900 to XL") do
+    romans(900).should(eq("CM"))
+  end
+  it("converts the arabic 9 to IX") do
+    romans(9).should(eq("IX"))
+  end
 end
