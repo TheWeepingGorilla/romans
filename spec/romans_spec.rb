@@ -26,5 +26,16 @@ describe("romans") do
   it("converts the arabic numeral 1500 to MD") do
     romans(1500).should(eq("MD"))
   end
-
+  it("converts the arabic numeral 400 to CD") do
+    romans(400).should(eq("CD"))
+  end
+  it("converts the arabic numeral 90 to XL") do
+    romans(90).should(eq("XC"))
+  end
+  it("converts the arabic numeral 4 to IV") do
+    romans(4).should(eq("IV"))
+  end
+  it("converts the arabic numeral 40 to XL") do
+    romans(40).should(eq("XL"))
+  end
 end

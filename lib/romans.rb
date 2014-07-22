@@ -16,8 +16,12 @@ def romans(number)
 
   num_C = number / 100
   number = number % 100
-  num_C.times do
-    numeral.push("C")
+  if num_C == 4
+    numeral.push("CD")
+  else
+    num_C.times do
+      numeral.push("C")
+    end
   end
 
   num_L = number / 50
@@ -28,8 +32,15 @@ def romans(number)
 
   num_X = number / 10
   number = number % 10
-  num_X.times do
-    numeral.push("X")
+  if (num_X == 4) && (numeral[-1] == "L")
+    numeral.pop
+    numeral.push("XC")
+  elsif num_X == 4
+    numeral.push("XL")
+  else
+    num_X.times do
+      numeral.push("X")
+    end
   end
 
   num_V = number / 5
@@ -38,8 +49,12 @@ def romans(number)
     numeral.push("V")
   end
 
-  number.times do
-    numeral.push("I")
+  if number == 4
+    numeral.push("IV")
+  else
+    number.times do
+      numeral.push("I")
+    end
   end
 
   numeral.join
