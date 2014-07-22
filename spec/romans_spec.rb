@@ -23,4 +23,8 @@ describe("romans") do
   it("converts the arabic numeral 1 to I") do
     romans(1).should(eq("I"))
   end
+  it("converts the arabic numeral 1500 to MD") do
+    romans(1500).should(eq("MD"))
+  end
+
 end
